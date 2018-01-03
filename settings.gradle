@@ -1,1 +1,1 @@
-include "app-admin", "mod-domain", "app-web"
+include "app-admin", "mod-domain", "app-angular-back"
