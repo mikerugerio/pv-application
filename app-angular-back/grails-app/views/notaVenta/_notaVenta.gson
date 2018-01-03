@@ -1,0 +1,7 @@
+import com.optica.NotaVenta
+
+model {
+	NotaVenta notaVenta
+}
+
+json g.render(notaVenta, [resolveTemplate: false])

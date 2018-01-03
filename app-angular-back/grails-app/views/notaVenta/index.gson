@@ -1,0 +1,8 @@
+import com.optica.NotaVenta
+
+model {
+	Iterable<NotaVenta> notaVentaList
+}
+
+json tmpl.notaVenta(notaVentaList ?: [])
+

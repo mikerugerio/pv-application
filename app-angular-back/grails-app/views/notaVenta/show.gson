@@ -1,0 +1,7 @@
+import com.optica.NotaVenta
+
+model {
+	NotaVenta notaVenta
+}
+
+json tmpl.notaVenta(notaVenta)
