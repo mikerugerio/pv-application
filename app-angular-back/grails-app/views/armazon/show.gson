@@ -1,0 +1,7 @@
+import com.optica.Armazon
+
+model {
+	Armazon armazon
+}
+
+json tmpl.armazon(armazon)

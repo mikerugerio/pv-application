@@ -1,0 +1,8 @@
+import com.optica.Armazon
+
+model {
+	Iterable<Armazon> armazonList
+}
+
+json tmpl.armazon(armazonList ?: [])
+
