@@ -6,6 +6,8 @@ class NotaVenta {
 	BigDecimal pago
 	Date fechaVenta
 
+	static hasMany = [listArmazones: Armazon]
+
     static constraints = {
     }
 }
