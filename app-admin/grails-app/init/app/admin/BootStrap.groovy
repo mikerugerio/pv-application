@@ -17,7 +17,7 @@ class BootStrap {
             def operatorRole = new Role(authority: 'ROLE_OPERATOR').save()
             def customerRole = new Role(authority: 'ROLE_CUSTOMER').save()
 
-            def adminUser = new User(username: 'admin', password: 'Password123!').save()
+            def adminUser = new User(username: 'admin', password: '12345').save()
             def operatorUser = new User(username: 'operator', password: 'Password123!').save()
             def customerUser = new User(username: 'customer', password: 'Password123!').save()
 
@@ -32,8 +32,8 @@ class BootStrap {
         }
 
         assert Role.count() == 3
-		//assert User.count() == 3
-		//assert UserRole.count() == 3
+		assert User.count() == 3
+		assert UserRole.count() == 3
     }
 
     def destroy = {
