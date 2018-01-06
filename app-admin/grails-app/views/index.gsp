@@ -41,6 +41,9 @@
                 </g:each>
             </ul>
         </li>
+        <li>
+            <g:link controller='logoff'>Logout</g:link>
+        </li>
     </content>
 
     <div class="svg" role="presentation">
@@ -51,12 +54,20 @@
 
     <div id="content" role="main">
         <section class="row colset-2-its">
-            <h1>Welcome to Grails</h1>
+            <p>
+                Congratulations <sec:loggedInUserInfo field='username'/>, you have successfully logged in Administration Application!
+            </p>
+            <p>
+                <sec:ifAllGranted roles='ROLE_ADMIN'>
+                    Sistema Admistración Punto de Venta
+                </sec:ifAllGranted>
+                <sec:ifAllGranted roles='ROLE_OPERATOR'>
+                    Manejo de las notas del Punto de Venta
+                </sec:ifAllGranted>
+            </p>
 
             <p>
-                Congratulations, you have successfully started your first Grails application! At the moment
-                this is the default page, feel free to modify it to either redirect to a controller or display
-                whatever content you may choose. Below is a list of controllers that are currently deployed in
+                Below is a list of controllers that are currently deployed in
                 this application, click on each to execute its default action:
             </p>
 
